@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grammy Awards Nominees</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+
+</html>
+
+
+<div id="title-container">
+    <img id="grammy-logo" src="https://static.wikia.nocookie.net/sza/images/c/c2/Grammy_Awards.jpg">
+    <div id="title">GRAMMY AWARDS NOMINEES</div>
+</div>
+
+<p id="instruction">Click the categories below to see the nominees!</p>
+
+<div class="button-container">
+    <button onclick="showCarousel(0)">Album of the Year</button>
+    <button onclick="showCarousel(1)">Record of the Year</button>
+    <button onclick="showCarousel(2)">Song of the Year</button>
+</div>
+
+<p id="instruction_2" class="hidden">Click the artwork below for the details!</p>
+
+<div class="carousel-container">
+    <div class="carousel" id="carousel-0">
+        <div class="carousel-item" onclick="showText(0, 0)">
+            <img src="https://i.scdn.co/image/ab67616d0000b2731572698fff8a1db257a53599" alt="Item 1A">
+        </div>
+        <div class="carousel-item" onclick="showText(0, 1)">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/aa/Billie_Eilish_-_Hit_Me_Hard_and_Soft.png"
+                alt="Item 2A">
+        </div>
+        <div class="carousel-item" onclick="showText(0, 2)">
+            <img src="https://www.jacobcollier.com/wp-content/uploads/sites/2030/2022/11/full_202308_jacobCollier_djesseVol4Cover-1200-compressed.jpg"
+                alt="Item 3A">
+        </div>
+    </div>
+
+    <div class="carousel" id="carousel-1">
+        <div class="carousel-item" onclick="showText(1, 0)">
+            <img src="https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad" alt="Item 1B">
+        </div>
+        <div class="carousel-item" onclick="showText(1, 1)">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/71/Espresso_-_Sabrina_Carpenter.png" alt="Item 2B">
+        </div>
+        <div class="carousel-item" onclick="showText(1, 2)">
+            <img src="https://i.scdn.co/image/ab67616d0000b27388e3822cccfb8f2832c70c2e" alt="Item 3B">
+        </div>
+    </div>
+
+    <div class="carousel" id="carousel-2">
+        <div class="carousel-item" onclick="showText(2, 0)">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/91/Taylor_Swift_-_Fortnight.png" alt="Item 1C">
+        </div>
+        <div class="carousel-item" onclick="showText(2, 1)">
+            <img src="https://i.ytimg.com/vi/nZjTtuNR3Og/sddefault.jpg" alt="Item 2C">
+        </div>
+        <div class="carousel-item" onclick="showText(2, 2)">
+            <img src="https://d24jnm9llkb1ub.cloudfront.net/icpn/00602465578072/00602465578072-cover-zoom.jpg"
+                alt="Item 3C">
+        </div>
+    </div>
+
+</div>
+
+<div class="text-popup" id="text-popup">
+    <p id="popup-text"></p>
+    <button onclick="hideText()">Close</button>
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
