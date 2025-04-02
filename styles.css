@@ -1,5 +1,11 @@
+/* Import fonts from Google Fonts for use throughout the site */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
 
+/* 
+ * Header container 
+ * Creates a flex container to position the logo and title side by side
+ */
 #title-container {
     display: flex;
     align-items: center;
@@ -9,11 +15,16 @@
     border-radius: 0px;
 }
 
+/* Grammy logo sizing to fit appropriately in the header */
 #grammy-logo {
     width: 80px;
     height: auto;
 }
 
+/* 
+ * Main title styling
+ * Sets large, bold, uppercase white text with padding
+ */
 #title {
     padding: 20px;
     margin-top: 20px;
@@ -23,17 +34,26 @@
     text-transform: uppercase;
 }
 
+/* 
+ * Global body styling
+ * Sets black background with white text, removes default spacing,
+ * applies Anton font with uppercase styling and letter spacing
+ */
 body {
     background-color: black;
     color: white;
     margin: 0;
     padding: 0;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Archivo', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
 }
 
+/* 
+ * Title styling (second declaration, overrides some properties from first)
+ * Adjusts font size, adds bottom margin
+ */
 #title {
     text-align: center;
     font-weight: bold;
@@ -41,6 +61,10 @@ body {
     margin-bottom: 15px;
 }
 
+/* 
+ * Primary instruction text styling
+ * Small, italic text with top margin
+ */
 #instruction {
     text-align: center;
     color: white;
@@ -49,6 +73,10 @@ body {
     font-style: italic;
 }
 
+/* 
+ * Secondary instruction text styling (shown after category selection)
+ * Matches primary instruction styling
+ */
 #instruction_2 {
     text-align: center;
     color: white;
@@ -57,14 +85,20 @@ body {
     font-style: italic;
 }
 
+/* Use to hide elements */
 .hidden {
     display: none;
 }
 
+/* Container for category selection buttons */
 .button-container {
-    margin-top: px;
+    margin-top: 5 px; /* Note: Missing value for margin-top */
 }
 
+/* 
+ * Button styling
+ * Gold buttons with bold text, rounded corners, and hover cursor
+ */
 button {
     background: gold;
     border: none;
@@ -76,23 +110,31 @@ button {
     border-radius: 5px;
 }
 
+/* 
+ * Carousel container
+ * Centers the carousels horizontally with top margin
+ */
 .carousel-container {
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
-/* Hide all carousels initially */
+/* Hide all carousels by default */
 .carousel {
     display: none;
     gap: 15px;
 }
 
-/* Ensure selected carousel is visible */
+/* Class to make selected carousel visible */
 .show-carousel {
     display: flex !important;
 }
 
+/* 
+ * Carousel item styling
+ * Fixed size squares with overflow hidden and hover animation
+ */
 .carousel-item {
     width: 200px;
     height: 200px;
@@ -101,6 +143,10 @@ button {
     transition: transform 0.3s ease;
 }
 
+/* 
+ * Carousel images
+ * Fill their container with cover sizing and rounded corners
+ */
 .carousel-item img {
     width: 100%;
     height: 100%;
@@ -108,10 +154,15 @@ button {
     border-radius: 10px;
 }
 
+/* Scale up effect on hover */
 .carousel-item:hover {
     transform: scale(1.1);
 }
 
+/* 
+ * Popup styling
+ * Fixed position, centered modal with semi-transparent background
+ */
 .text-popup {
     display: none;
     position: fixed;
@@ -125,14 +176,48 @@ button {
     width: 300px;
 }
 
+/* Text styling within popup */
 .text-popup p {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
+/* Close button styling for popup - changed to an X in the corner */
 .text-popup button {
-    background: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
+    position: absolute;          
+    top: 5px;                   
+    right: 5px;                 
+    background: transparent;     
+    border: none;                
+    color: gray;              
+    font-size: 15px;             
+    font-weight: normal;           
+    cursor: pointer;             
+    padding: 5px;                
+    width: 30px;                 
+    height: 30px;                
+    display: flex;              
+    align-items: center;         
+    justify-content: center;    
+    border-radius: 50%;          
+    line-height: 1;            
+}
+
+/* Add hover effect to the close button */
+.text-popup button:hover {
+    background: rgba(255, 255, 255, 0.2);  
+}
+
+/* Make sure popup has position relative for absolute positioning of the X button */
+.text-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    display: none;
 }

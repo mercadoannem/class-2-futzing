@@ -1,35 +1,37 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en"> 
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Grammy Awards Nominees</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Grammy Awards Nominees</title> <!-- Page title text-->
+    <link rel="stylesheet" href="styles.css"> <!-- CSS File -->
 </head>
 
-<body>
+<body> 
 
-
-
-</html>
-
-
+<!-- Page header section with Grammy logo and title -->
 <div id="title-container">
-    <img id="grammy-logo" src="https://static.wikia.nocookie.net/sza/images/c/c2/Grammy_Awards.jpg">
-    <div id="title">2025 GRAMMY AWARDS NOMINEES</div>
+    <img id="grammy-logo" src="https://static.wikia.nocookie.net/sza/images/c/c2/Grammy_Awards.jpg"> <!-- Grammy Awards logo image -->
+    <div id="title">2025 GRAMMY AWARDS NOMINEES</div> <!-- Main page title text -->
 </div>
 
+<!-- Initial instruction text -->
 <p id="instruction">Click the categories below to see the nominees!</p>
 
+<!-- Navigation buttons -->
 <div class="button-container">
-    <button onclick="showCarousel(0)">Album of the Year</button>
-    <button onclick="showCarousel(1)">Record of the Year</button>
-    <button onclick="showCarousel(2)">Song of the Year</button>
+    <button onclick="showCarousel(0)">Album of the Year</button> <!-- Album nominees -->
+    <button onclick="showCarousel(1)">Record of the Year</button> <!-- Record nominees -->
+    <button onclick="showCarousel(2)">Song of the Year</button> <!-- Song nominees -->
 </div>
 
+<!-- Instruction after category selection (initially hidden) -->
 <p id="instruction_2" class="hidden">Click the artwork below for the details!</p>
 
+<!-- Container for all carousels -->
 <div class="carousel-container">
+    <!-- Carousel for "Album of the Year" nominees (index 0) -->
     <div class="carousel" id="carousel-0">
         <div class="carousel-item" onclick="showText(0, 0)">
             <img src="https://i.scdn.co/image/ab67616d0000b2731572698fff8a1db257a53599" alt="Item 1A">
@@ -44,6 +46,7 @@
         </div>
     </div>
 
+    <!-- Carousel for "Record of the Year" nominees (index 1) -->
     <div class="carousel" id="carousel-1">
         <div class="carousel-item" onclick="showText(1, 0)">
             <img src="https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad" alt="Item 1B">
@@ -56,12 +59,13 @@
         </div>
     </div>
 
+    <!-- Carousel for "Song of the Year" nominees (index 2) -->
     <div class="carousel" id="carousel-2">
         <div class="carousel-item" onclick="showText(2, 0)">
             <img src="https://upload.wikimedia.org/wikipedia/en/9/91/Taylor_Swift_-_Fortnight.png" alt="Item 1C">
         </div>
         <div class="carousel-item" onclick="showText(2, 1)">
-            <img src="https://i.ytimg.com/vi/nZjTtuNR3Og/sddefault.jpg" alt="Item 2C">
+            <img src="https://rhythmverse.co/assets/album_art/h/highway-85081.png" alt="Item 2C">
         </div>
         <div class="carousel-item" onclick="showText(2, 2)">
             <img src="https://d24jnm9llkb1ub.cloudfront.net/icpn/00602465578072/00602465578072-cover-zoom.jpg"
@@ -72,10 +76,12 @@
 </div>
 
 <div class="text-popup" id="text-popup">
-    <p id="popup-text"></p>
-    <button onclick="hideText()">Close</button>
+    <p id="popup-text"></p> <!-- Container for the popup text content -->
+    <button onclick="hideText()">X</button>
 </div>
 
+<!-- Links to external JavaScript file for interactive functionality -->
 <script src="scripts.js"></script>
 
 </body>
+</html>
