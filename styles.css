@@ -10,9 +10,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0px;
+    gap: 10px;
     border: 1px solid white;
-    border-radius: 0px;
+    border-radius: 5px;
+    padding: 10px 20px;
 }
 
 /* Grammy logo sizing to fit appropriately in the header */
@@ -114,16 +115,22 @@ button {
  * Carousel container
  * Centers the carousels horizontally with top margin
  */
-.carousel-container {
+ .carousel-container {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    width: 100%;
+    overflow: hidden; /* Hide anything outside the container */
 }
 
 /* Hide all carousels by default */
 .carousel {
     display: none;
+    flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
+    max-width: 900px;
+    transition: transform 0.5s ease;
 }
 
 /* Class to make selected carousel visible */
@@ -135,14 +142,14 @@ button {
  * Carousel item styling
  * Fixed size squares with overflow hidden and hover animation
  */
-.carousel-item {
+ .carousel-item {
     width: 200px;
     height: 200px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
+    margin-bottom: 15px; 
 }
-
 /* 
  * Carousel images
  * Fill their container with cover sizing and rounded corners
@@ -220,4 +227,9 @@ button {
     text-align: center;
     width: 300px;
     display: none;
+}
+/* Dimmed background effect */
+body.popup-active .carousel {
+    pointer-events: none;
+    opacity: 0.4;
 }
